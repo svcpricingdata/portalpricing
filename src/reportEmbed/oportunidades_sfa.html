@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pricing - Consulta Oportunidades</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #ffffff;
+    }
+
+    body {
+      position: fixed;
+      inset: 0;
+    }
+
+    .powerbi-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      background-color: #ffffff;
+    }
+
+    .powerbi-frame {
+      position: absolute;
+
+      /*
+        Esconde a faixa superior "Public\No Footer".
+        Se cortar o topo do relatório, altere para -35px ou -40px.
+        Se ainda aparecer a faixa, altere para -55px ou -60px.
+      */
+      top: -48px;
+
+      left: 0;
+
+      /*
+        Aumenta a largura para empurrar a barra lateral cinza
+        para fora da tela.
+      */
+      width: calc(100vw + 32px);
+
+      /*
+        Aumenta a altura para esconder a barra inferior do Power BI
+        e compensar o deslocamento superior.
+      */
+      height: calc(100vh + 180px);
+
+      border: none;
+      outline: none;
+      display: block;
+      background-color: #ffffff;
+    }
+
+    html::-webkit-scrollbar,
+    body::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="powerbi-container">
+    <iframe
+      class="powerbi-frame"
+      title="Consulta de Oportunidades"
+      src="https://app.powerbi.com/reportEmbed?reportId=852ea6c7-4de7-4ff5-a914-d939c985dc84&amp;groupId=1a4f41af-8da5-4c87-b138-0f4333b44dde&amp;autoAuth=true&amp;chromeless=1&amp;navContentPaneEnabled=false&amp;filterPaneEnabled=false"
+      allowfullscreen="true">
+    </iframe>
+  </div>
+</body>
+</html>
